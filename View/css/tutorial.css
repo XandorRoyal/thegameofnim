@@ -1,0 +1,58 @@
+html, body {
+    margin: 0 0 0 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.title {
+    margin-top: 0;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-button:hover {
+    background-color: #45a049;
+}
+
+#backButton {
+    max-width: 8%;
+    text-decoration: none;
+}
+
+#mainBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#inBox {
+    border: 2px solid gray;
+    min-width: 60%;
+    text-align: center;
+}
