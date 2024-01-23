@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Difficulties</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Select Difficulty</h1>
+  <div class="difficulty-buttons">
+    <button onclick="selectDifficulty('easy')">Easy</button>
+    <button onclick="selectDifficulty('medium')">Medium</button>
+    <button onclick="selectDifficulty('hard')">Hard</button>
+  </div>
+
+  <script>
+    function selectDifficulty(difficulty) {
+      // You can perform actions based on the selected difficulty here
+      console.log('Selected difficulty: ' + difficulty);
+      // For example, you can navigate to the next screen based on the selected difficulty
+      // window.location.href = 'game_screen.html?difficulty=' + difficulty;
+    }
+  </script>
+</body>
+</html>
