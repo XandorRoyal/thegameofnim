@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let stonesInRows = [1, 2, 3, 4];
     let selectedRow = null;
     let removedStones = 0;
-
+    
+    function changeBackground() {
+        var newColor = prompt("Enter a color (e.g. 'red', '#00FF00', 'rgb(0, 255, 0)'):");
+      
+        localStorage.setItem("background", newColor);
+      
+        document.body.style.backgroundColor = newColor;
+      }
     function getBackground() {
         console.log("Getting Background Colors");
     
@@ -16,22 +23,22 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.backgroundColor = background;
     }
     function updateGameState() {
-        const stoneButtons = document.getElementById('stoneButtons');
+        const matchButtons = document.getElementById('matchButtons');
         const removeButtons = document.getElementById('removeButtons');
         const turnDisplay = document.getElementById('turnDisplay');
 
-        stoneButtons.innerHTML = '';
+        matchButtons.innerHTML = '';
         removeButtons.innerHTML = '';
         turnDisplay.textContent = `Turn: ${currentPlayer}`;
 
         for (let i = 0; i < rows; i++) {
             for (let j = 0; j < stonesInRows[i]; j++) {
-                const stoneButton = document.createElement('button');
-                stoneButton.textContent = 'Match';
-                stoneButton.onclick = function () {
+                const matchButton = document.createElement('button');
+                matchButton.textContent = 'match';
+                matchButton.onclick = function () {
                     selectStone(i);
                 };
-                stoneButtons.appendChild(stoneButton);
+                matchButtons.appendChild(matchButton);
             }
 
             const removeButton = document.createElement('button');
@@ -41,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
             removeButtons.appendChild(removeButton);
 
-            stoneButtons.appendChild(document.createElement('br')); // Line break for pyramid shape
+            matchButtons.appendChild(document.createElement('br')); // Line break for pyramid shape
         }
     }
 

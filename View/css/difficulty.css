@@ -62,7 +62,7 @@ body {
     visibility: hidden; /* Hide empty rows */
   }
   
-  #stoneButtons {
+  #matchButtons {
     margin-right: 20px;
     pointer-events: none;
     
