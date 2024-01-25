@@ -1,47 +1,60 @@
-html, body {
-    margin: 0 0 0 0;
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: "Josefin Sans", sans-serif;
 }
 
 body {
+    text-align: center;
+    padding: 50px;
+}
+h1 {
+    margin-bottom: 20px;
+}
+
+body {
+    margin-top: 100px;
+}
+
+input {
+    width: 180px;
+    border-radius: 10px;
+    border-color: lightgray;
+}
+
+.menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-
-h1 {
-    font-size: 50px;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-.title {
-    margin-top: 0;
-    padding-top: 20px;
-    width: 100%;
-    text-align: center;
-}
-
 .menu-button {
     margin: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #a3b18a;
     color: white;
     border: none;
     cursor: pointer;
-    text-align: center;
+    border-radius: 10px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    /* display: block; */
+    /* margin-left: 1100px; */
 }
-
 .menu-button:hover {
-    background-color: #45a049;
+    background-color: #588157;
+}
+.username-input {
+    margin: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+.rules-text {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-#backButton {
-    max-width: 8%;
-    text-decoration: none;
-}
 
 #mainBox {
     display: flex;
