@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Difficulties</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/mainmenu.css">
+  <script src="../Controller/difficulties.js"></script>
 </head>
 <body>
   <h1>Select Difficulty</h1>
+  <p>Welcome <span id = 'player1'></span> and <span id="player2"></span></p>
   <div class="difficulty-buttons">
-    <button onclick="selectDifficulty('easy')">Easy</button>
-    <button onclick="selectDifficulty('medium')">Medium</button>
-    <button onclick="selectDifficulty('hard')">Hard</button>
+    <button class="menu-button" onclick="selectDifficulty('easy')">Easy</button>
+    <button class="menu-button" onclick="selectDifficulty('medium')">Medium</button>
+    <button class="menu-button" onclick="selectDifficulty('hard')">Hard</button>
   </div>
 
   <script>
