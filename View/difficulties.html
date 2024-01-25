@@ -9,7 +9,7 @@
 </head>
 <body>
   <h1>Select Difficulty</h1>
-  <p>Welcome <span id = 'player1'></span> and <span id="player2"></span></p>
+  <p>Welcome <span id='player1'></span> and <span id='player2'></span></p>
   <div class="difficulty-buttons">
     <button class="menu-button" onclick="location.href='./menu.html'">Back To Menu</button>
     <button class="menu-button" onclick="selectDifficulty('easy')">Easy</button>
@@ -18,11 +18,40 @@
   </div>
 
   <script>
+    // Retrieve player names from local storage
+    const player1Name = localStorage.getItem('player1') || 'Player 1';
+    const player2Name = localStorage.getItem('player2') || 'Player 2';
+
+    // Display player names
+    document.getElementById('player1').textContent = player1Name;
+    document.getElementById('player2').textContent = player2Name;
+    
     function selectDifficulty(difficulty) {
-      // You can perform actions based on the selected difficulty here
-      console.log('Selected difficulty: ' + difficulty);
-      // For example, you can navigate to the next screen based on the selected difficulty
-      // window.location.href = 'game_screen.html?difficulty=' + difficulty;
+  const difficultyNumber = getDifficultyNumber(difficulty);
+  console.log(`Selected difficulty: ${difficultyNumber}`);
+
+  // Save the selected difficulty as an integer in local storage
+  localStorage.setItem('difficulty', difficultyNumber);
+  
+  // Construct the correct URL
+  const url = `difficulty${difficultyNumber}.html`;
+  console.log(`Redirecting to: ${url}`);
+
+  // Redirect to the corresponding difficulty page
+  window.location.href = url;
+}
+
+    function getDifficultyNumber(difficulty) {
+      switch (difficulty) {
+        case 'easy':
+          return 1;
+        case 'medium':
+          return 2;
+        case 'hard':
+          return 3;
+        default:
+          return 1; // Default to easy if an invalid difficulty is provided
+      }
     }
   </script>
 </body>

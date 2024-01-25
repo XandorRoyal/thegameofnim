@@ -7,6 +7,40 @@ body {
 h1 {
   margin-bottom: 20px;
 }
+.row-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+#game-container {
+  display: flex;
+}
+
+#stoneButtons {
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+#removeButtons {
+  display: flex;
+  flex-direction: column;
+}
+.row-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#currentPlayer {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 .menu {
   display: flex;
   flex-direction: column;
