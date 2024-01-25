@@ -9,5 +9,5 @@ function saveUsernames() {
     localStorage.setItem('player2', player2);
     localStorage.setItem('background', 'white');
 
-    location.href='./View/menu.html'
+    location.href='./View/menu.html';
 }

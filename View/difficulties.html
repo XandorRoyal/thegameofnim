@@ -1,58 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Difficulties</title>
-  <link rel="stylesheet" href="./css/mainmenu.css">
-  <script src="../Controller/difficulties.js"></script>
-</head>
-<body>
-  <h1>Game of Nim!</h1>
-  <h3>Please select any difficulty to begin the game!</h3>
-  <div class="difficulty-buttons">
-    <button class="menu-button" onclick="selectDifficulty('easy')">Easy</button>
-    <button class="menu-button" onclick="selectDifficulty('medium')">Medium</button>
-    <button class="menu-button" onclick="selectDifficulty('hard')">Hard</button>
-    <button class="menu-button" onclick="location.href='./menu.html'">< Back To Menu</button>
-  </div>
-
-  <script>
-    // Retrieve player names from local storage
-    const player1Name = localStorage.getItem('player1') || 'Player 1';
-    const player2Name = localStorage.getItem('player2') || 'Player 2';
-
-    // Display player names
-    document.getElementById('player1').textContent = player1Name;
-    document.getElementById('player2').textContent = player2Name;
-    
-    function selectDifficulty(difficulty) {
-  const difficultyNumber = getDifficultyNumber(difficulty);
-  console.log(`Selected difficulty: ${difficultyNumber}`);
-
-  // Save the selected difficulty as an integer in local storage
-  localStorage.setItem('difficulty', difficultyNumber);
-  
-  // Construct the correct URL
-  const url = `difficulty${difficultyNumber}.html`;
-  console.log(`Redirecting to: ${url}`);
-
-  // Redirect to the corresponding difficulty page
-  window.location.href = url;
-}
-
-    function getDifficultyNumber(difficulty) {
-      switch (difficulty) {
-        case 'easy':
-          return 1;
-        case 'medium':
-          return 2;
-        case 'hard':
-          return 3;
-        default:
-          return 1; // Default to easy if an invalid difficulty is provided
-      }
-    }
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difficulties</title>
+    <link rel="stylesheet" href="./css/mainmenu.css"> 
+    <script src="../Controller/difficulties.js"></script>
+    <script src="../Controller/loadNamesAndBackground.js"></script>
+  </head>
+  <body>
+    <h1>Game of Nim!</h1>
+    <h3>Please select any difficulty to begin the game!</h3>
+    <div class="difficulty-buttons">
+      <button class="menu-button" onclick="location.href='./menu.html'">Back To Menu</button>
+      <button class="menu-button" onclick="selectDifficulty(1)">Easy</button>
+      <button class="menu-button" onclick="selectDifficulty(2)">Medium</button>
+      <button class="menu-button" onclick="selectDifficulty(3)">Hard</button>
+    </div>
+  </body>
 </html>
