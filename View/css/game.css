@@ -1,0 +1,71 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  height: 100%;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#gameContainer {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #808080;
+  
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #606060;
+}
+
+#matchButtons {
+  width: 100%;
+}
+
+.chipRow {
+  width: 100%;
+  margin: 3% 0 3% 0;
+}
+
+.chip{
+  margin: 0 1% 0 1%;
+  background: url(../../Assets/Chips/MatchStick_Tip.png);
+  background-size: 100%;
+  min-height: 75px;
+}
+
+#playerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  font-size: 40px;
+}
+
+#player1 {
+  float: left;
+}
+
+#player2 {
+  float: right;
+}
+
+#arrowImg {
+  display: inline;
+  max-width: 100px;
+  transform: rotate(180deg);
+}
