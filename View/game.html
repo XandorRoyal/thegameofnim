@@ -9,15 +9,26 @@
     <script src="../Controller/loadNamesAndBackground.js"></script>
   </head>
   <body>
-    <h1>The Game Of Nim</h1>
+    <h1>Game Of Nim</h1>
     <div id="gameContainer">
       <div id="matchButtons"></div>
     </div>
-    <button id="endTurn" onclick="nextPlayerTurn()">End Turn</button>
+    <button class="menu-button" id="endTurn" onclick="nextPlayerTurn()">End Turn</button>
     <div id="playerContainer">
-      <span id="player1"></span>
+      <div class="playerCircle">
+        <br>
+        <br>
+        <br>
+        <span id="player1"></span>
+      </div>
       <img id="arrowImg" src="../Assets/Misc/arrow.png">
-      <span id="player2"></span>
+      <div class="playerCircle">
+        <br>
+        <br>
+        <br>
+        <span id="player2"></span>
+      </div>
+      
     </div>
   </body>
 </html>
