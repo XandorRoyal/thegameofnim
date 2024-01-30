@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+}
 
 body {
-  font-family: Arial, sans-serif;
   text-align: center;
   padding: 50px;
   height: 100%;
@@ -13,22 +17,47 @@ h1 {
 #gameContainer {
   display: flex;
   justify-content: center;
-  width: 65%;
+  width: 80%;
+  padding: 20px;
+  border-radius: 15px;
   margin: 0 auto;
+  background-color: #b8bdb5;
 }
 
 button {
   margin-top: 10px;
-  background-color: #808080;
-  
-  color: white;
   padding: 10px;
+  font-size: 16px;
+  background-color: #889696;
+  color: white;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
 }
 
 button:hover {
-  background-color: #606060;
+  background-color: #5f7470;
+  border-radius: 10px;
+}
+
+.menu-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #889696;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.menu-button:hover {
+  background-color: #5f7470;
+  border-radius: 10px;
 }
 
 #matchButtons {
@@ -52,16 +81,19 @@ button:hover {
   align-items: center;
   justify-content: space-around;
   margin-top: 20px;
-
   font-size: 40px;
 }
 
 #player1 {
-  float: left;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 
 #player2 {
-  float: right;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 
 #arrowImg {
@@ -69,3 +101,12 @@ button:hover {
   max-width: 100px;
   transform: rotate(180deg);
 }
+
+.playerCircle {
+  background-color: #e0e2db;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
