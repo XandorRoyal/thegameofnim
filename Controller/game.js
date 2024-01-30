@@ -49,6 +49,10 @@ function endGame() {
     document.getElementById('endTurn').style.visibility = "hidden";
 }
 
+function quitGame() {
+    location.href = './menu.html';
+}
+
 function selectChip(chipEle){
     if (rowSelected == null) rowSelected = chipEle.parentNode;
     if (chipEle.parentNode != rowSelected) {alert("You must choose chips from the same row."); return; }
